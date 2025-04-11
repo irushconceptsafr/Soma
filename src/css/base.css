@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --Accent-Green: #6BFD87;
+    --Accent-Blue: #68B8E8;
+    --Accent-Purple: #C08BF3;
+    --Accent-Pink: #FF89D0;
+    --Accent-Orange: #FFCC6F;
+
+    --background-light: #FFFFEE;
+    
+    --glass-light: #ffffff80;
+
+    --Text-light: #222222;
+}
+
+* {
+    font-family: "Quicksand", sans-serif;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: var(--Text-light);
+}
+
+body{
+    background: var(--background-light);
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+nav{
+    position: fixed;
+    top: 24px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    background: var(--glass-light);
+    border: 2px solid #fff;
+    padding: 12px ;
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    z-index: 1000;
+    box-shadow: 2px 3px 5px #eee;
+}
+
+main{
+    position: relative;
+    top: 100px;
+    width: 90%;
+}
+
+.card-container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.card{
+    padding: 12px;
+    text-align: center;
+    height: 400px;
+    width: 300px;
+    border: 2px solid #555;
+    border-radius: 12px;
+    box-shadow:  2px 3px 5px #222;
+    transition-duration: 0.3s;
+    transition-delay: 100ms;
+    transition-timing-function: ease-in-out;
+    display:  grid;
+    grid: "Image Image"3fr
+    "Text Text"5fr
+    "Button Button"2fr
+    /1fr
+}
+
+.card:hover{
+    box-shadow:  3px 5px 15px #444;
+}
+
+.image{
+    grid-area: Image;
+}
+
+.text{
+    grid-area:  Text;
+}
+
+.text h3{
+    margin-bottom: 20px;
+}
+
+.button{
+    grid-area: Button;
+}
+
+.button button{
+    padding: 12px 24px;
+    border-radius: 12px;
+    background: var(--Accent-Blue);
+    font-weight: 600;
+}
